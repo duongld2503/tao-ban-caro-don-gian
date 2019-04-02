@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label id="board"></label>
+<script>
+    var caro = new Array(5);
+        for (i = 0; i < 5; i++){
+            caro[i] = new Array(4)
+                for (j=0; j<caro[i].length;j++){
+                    caro[i][j] = 0;
+            }
+            document.getElementById("board").innerHTML += caro[i]+"<br>"
+        }
+
+    function change() {
+        i = prompt("nhap vao hang muon thay doi: ");
+        j = prompt("nhap vao cot muon thay doi:");
+        caro[i][j] = prompt("gia tri can thay doi: ");
+        document.getElementById("board").innerHTML = '';
+        for (i = 0; i < 5; i++){
+             document.getElementById("board").innerHTML += caro[i]+"<br>"
+        }
+    }
+
+</script>
+<button id="change" onclick="change()">change</button>
+</body>
+</html>
